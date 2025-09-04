@@ -1,6 +1,91 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060606;
+}
+
+.container {
+    position: relative;
+    /* border: 10px solid #faf5f5; */
+
+    /* width: 300px; */
+    /* height: 300px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 25%;
+    background-color: rgb(11, 7, 31);
+    border: 2px solid #9a9898;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    font-size: 24px;
+    /* inset is a short hand of top, right, bottom, left it is used to position the element */
+    inset: 12px;
+    text-align: center;
+
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+.hand {
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+   
+}
+
+
+.hand i {
+    position: absolute;
+    background-color: var(--clr);
+    border-radius: 8px;
+    width: 4px;
+    height: var(--h);
+
 }
